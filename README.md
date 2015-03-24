@@ -35,7 +35,7 @@ grunt.initConfig({
         dev: {
             src: 'templates/*.html', // Input path. Location of the HTML Knockout Templates. Expect template files to have the .html extension
             dest: 'templates.js',    // Output path
-            namespace: 'foo'         // Optional. The variable to which the string array will be assigned. Default value is "window.koTemplates"
+            namespace: 'foo'         // Optional. The variable to which the string array will be assigned. Default value is "window.koTemplates" This has to be a global variable.
         }
     }
 });
@@ -102,14 +102,14 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+
+* 2015-03-24    v0.2.0     input, output and namespace configurable
+* 2015-03-24    v0.1.0     initial release
 
 ## TODO
 
-* make output configurable
-* make input configurable
-* make assigned variable configurable
-* allow multiple input files
-* add example JS of String Template Engine
-* unit tests
-* publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
+* Edit documentation "Options"
+* Edit documentation "Contributing"
+* Add example JS of String Template Engine
+* Unit tests
+* Publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
