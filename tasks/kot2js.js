@@ -17,7 +17,14 @@ module.exports = function(grunt) {
         // Merge task-specific and/or target-specific options with these defaults.
         var path = require('path'),
             files = grunt.file.expand(this.data.src),
-            result = '(function () {\n    \'use strict\';\n    window.koTemplates = {};\n';
+            result = '(function () {\n    \'use strict\';\n',
+            namespace = 'window.koTemplates';
+
+        if(this.data.namespace) {
+            namespace = this.data.namespace;
+        }
+
+        result += '    ' + namespace + ' = {};\n';
 
         files.forEach(function(file) {
             //strip the extension to determine a template name
@@ -26,7 +33,7 @@ module.exports = function(grunt) {
                 escapedContents = grunt.file.read(file).replace(/"/g , '\\x22').
                     replace(/(\r\n|\n|\r)/gm, '');
 
-            result += '    window.koTemplates[\"' + name + '\"] = \"' + escapedContents + '\";\n';
+            result += '    ' + namespace + '[\"' + name + '\"] = \"' + escapedContents + '\";\n';
         });
 
         result += '})();';

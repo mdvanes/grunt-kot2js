@@ -8,10 +8,12 @@ This plugin requires Grunt `~0.4.5`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-# npm install grunt-kot2js --save-dev
+# This doesn't work yet: npm install grunt-kot2js --save-dev
 
-add to package.json dev-dependencies:
-'kot2js': ''https://github.com/mdvanes/grunt-kot2js.git'
+# add this to package.json dev-dependencies:
+"grunt-kot2js": "git+http://git@github.com/mdvanes/grunt-kot2js.git"
+# and run
+npm install
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
@@ -29,15 +31,24 @@ In your project's Gruntfile, add a section named `kot2js` to the data object pas
 
 ```js
 grunt.initConfig({
-  kot2js: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+    kot2js: {
+        dev: {
+            src: 'templates/*.html', // Input path. Location of the HTML Knockout Templates. Expect template files to have the .html extension
+            dest: 'templates.js',    // Output path
+            namespace: 'foo'         // Optional. The variable to which the string array will be assigned. Default value is "window.koTemplates"
+        }
+    }
 });
+```
+
+Example output:
+
+```js
+(function () {
+    'use strict';
+    window.koTemplates = {};
+    window.koTemplates["main"] = "<div class=\x22rdt\x22 id=\x22rdt\x22></div>";
+})();
 ```
 
 ### Options
@@ -98,6 +109,7 @@ _(Nothing yet)_
 * make output configurable
 * make input configurable
 * make assigned variable configurable
+* allow multiple input files
 * add example JS of String Template Engine
 * unit tests
-* convert to registered plugin conform http://gruntjs.com/creating-plugins
+* publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
