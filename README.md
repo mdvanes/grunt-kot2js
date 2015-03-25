@@ -16,18 +16,15 @@ stringTemplateEngine.init(koTemplates);
 stringTemplateEngine.getElement('TemplateA', DebugViewModel, null, null, $('#wrapper'));
 ```
 
+See also [grunt-kot2html](https://github.com/mdvanes/grunt-kot2html).
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-# This doesn't work yet: npm install grunt-kot2js --save-dev
-
-# add this to package.json dev-dependencies:
-"grunt-kot2js": "git+http://git@github.com/mdvanes/grunt-kot2js.git"
-# and run
-npm install
+npm install grunt-kot2js --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
@@ -71,7 +68,7 @@ Example output:
 Type: `String`
 Default value: `',  '`
 
-Not an option, but directly in the task. Input path. Location of the HTML Knockout Templates. Expect template files to have the .html extension
+Not an option, but directly in the task. Input path. Location of the HTML Knockout Templates. Expects template files to have the .html extension
 
 #### dest
 Type: `String`
@@ -114,6 +111,5 @@ Follow the jshintrc settings for the code style. Add unit tests for any new or c
 ## To Do
 
 * When committing got: warning: LF will be replaced by CRLF in test/expected/dev. This means that the unit test will fail.
-* Publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
 * Add lintspaces
 * Add unit test for stringTemplateEngine
