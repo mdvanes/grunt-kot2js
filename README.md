@@ -94,13 +94,13 @@ Follow the jshintrc settings for the code style. Add unit tests for any new or c
 
 ## Release History
 
+* 2015-03-25    v0.4.0     added lib/stringTemplateEngine.js
 * 2015-03-25    v0.3.0     added unit tests
 * 2015-03-24    v0.2.0     input, output and namespace configurable
 * 2015-03-24    v0.1.0     initial release
 
 ## To Do
 
-* Add lib JS of String Template Engine
 * When committing got: warning: LF will be replaced by CRLF in test/expected/dev. This means that the unit test will fail.
 * Publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
 * Add lintspaces
