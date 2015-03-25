@@ -1,11 +1,11 @@
 {
   "name": "grunt-kot2js",
   "description": "grunt task to convert Knockout templates to a string in a JavaScript file for the String Template Engine.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/mdvanes/grunt-kot2js",
   "author": {
     "name": "M.D. van Es",
-    "email": "c"
+    "url": "http://mdworld.nl"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,8 @@
     "grunt": "~0.4.5"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "knockout",
+    "template"
   ]
 }
