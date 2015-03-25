@@ -101,4 +101,6 @@ Follow the jshintrc settings for the code style. Add unit tests for any new or c
 ## To Do
 
 * Add lib JS of String Template Engine
+* When committing got: warning: LF will be replaced by CRLF in test/expected/dev. This means that the unit test will fail.
 * Publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
+* Add lintspaces

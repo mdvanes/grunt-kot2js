@@ -16,6 +16,7 @@ module.exports = function (grunt) {
             all: [
                 'Gruntfile.js',
                 'tasks/*.js',
+                'lib/stringTemplateEngine.js',
                 '<%= nodeunit.tests %>'
             ],
             options: {
