@@ -2,6 +2,8 @@
 
 > Grunt task to convert Knockout templates to a string in a JavaScript file for the String Template Engine.
 
+Based on https://blog.safaribooksonline.com/2014/01/31/using-external-templates-knockout-js/ and https://github.com/rniemeyer/SamplePresentation/blob/master/js/stringTemplateEngine.js
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
@@ -33,9 +35,9 @@ In your project's Gruntfile, add a section named `kot2js` to the data object pas
 grunt.initConfig({
     kot2js: {
         dev: {
-            src: 'templates/*.html', // Input path. Location of the HTML Knockout Templates. Expect template files to have the .html extension
-            dest: 'templates.js',    // Output path
-            namespace: 'foo'         // Optional. The variable to which the string array will be assigned. Default value is "window.koTemplates" This has to be a global variable.
+            src: 'templates/*.html',
+            dest: 'templates.js',
+            namespace: 'foo'
         }
     }
 });
@@ -53,63 +55,50 @@ Example output:
 
 ### Options
 
-#### options.separator
+#### src
 Type: `String`
 Default value: `',  '`
 
-A string value that is used to do something with whatever.
+Not an option, but directly in the task. Input path. Location of the HTML Knockout Templates. Expect template files to have the .html extension
 
-#### options.punctuation
+#### dest
 Type: `String`
-Default value: `'.'`
+Default value: `',  '`
 
-A string value that is used to do something else with whatever else.
+Not an option, but directly in the task. Output path. Location of the generated JavaScript file.
+
+#### namespace
+Type: `String`
+Default value: `',  '`
+
+Not an option, but directly in the task. Optional. The variable to which the string array will be assigned. Default value is "window.koTemplates" This has to be a global variable.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the sources are files with the .html extension in the `templates` dir and the generated file is `templates.js` in the root dir. The namespace is the default `window.koTemplates`.
 
 ```js
 grunt.initConfig({
-  kot2js: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  kot2js: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+    kot2js: {
+        dev: {
+            src: 'templates/*.html',
+            dest: 'templates.js'
+        }
+    }
 });
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+Follow the jshintrc settings for the code style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 
 * 2015-03-24    v0.2.0     input, output and namespace configurable
 * 2015-03-24    v0.1.0     initial release
 
-## TODO
+## To Do
 
-* Edit documentation "Options"
-* Edit documentation "Contributing"
-* Add example JS of String Template Engine
+* Add lib JS of String Template Engine
 * Unit tests
 * Publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
