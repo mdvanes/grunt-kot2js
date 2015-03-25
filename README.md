@@ -4,6 +4,18 @@
 
 Based on https://blog.safaribooksonline.com/2014/01/31/using-external-templates-knockout-js/ and https://github.com/rniemeyer/SamplePresentation/blob/master/js/stringTemplateEngine.js
 
+A version of the String Template Engine is included. It's located in `grunt-kot2js/lib/stringTemplateEngine.js`.
+
+Usage of the stringTemplateEngine:
+
+```js
+function DebugViewModel() {
+    this.testValues = {foo: 'bar'};
+}
+stringTemplateEngine.init(koTemplates);
+stringTemplateEngine.getElement('TemplateA', DebugViewModel, null, null, $('#wrapper'));
+```
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
@@ -104,3 +116,4 @@ Follow the jshintrc settings for the code style. Add unit tests for any new or c
 * When committing got: warning: LF will be replaced by CRLF in test/expected/dev. This means that the unit test will fail.
 * Publish the plugin to NPM, conform http://gruntjs.com/creating-plugins
 * Add lintspaces
+* Add unit test for stringTemplateEngine
