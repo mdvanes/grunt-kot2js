@@ -13,7 +13,7 @@ function DebugViewModel() {
     this.testValues = {foo: 'bar'};
 }
 stringTemplateEngine.init(koTemplates);
-stringTemplateEngine.getElement('TemplateA', DebugViewModel, null, null, $('#wrapper'));
+ko.applyBindings(new DebugViewModel(), $('#wrapper')); // Where <div id="wrapper" data-bind="template: { name: 'TemplateA' }"></div>
 ```
 
 See also [grunt-kot2html](https://github.com/mdvanes/grunt-kot2html).
