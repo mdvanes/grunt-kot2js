@@ -62,25 +62,23 @@ Example output:
 })();
 ```
 
-### Options
+### Properties
 
 #### src
 Type: `String`
-Default value: `',  '`
 
-Not an option, but directly in the task. Input path. Location of the HTML Knockout Templates. Expects template files to have the .html extension
+Input path. Location of the HTML Knockout Templates. Expects template files to have the .html extension
 
 #### dest
 Type: `String`
-Default value: `',  '`
 
-Not an option, but directly in the task. Output path. Location of the generated JavaScript file.
+Output path. Location of the generated JavaScript file.
 
 #### namespace
 Type: `String`
-Default value: `',  '`
+Default value: `'window.koTemplates'`
 
-Not an option, but directly in the task. Optional. The variable to which the string array will be assigned. Default value is "window.koTemplates" This has to be a global variable.
+Optional. The variable to which the string array will be assigned. This has to be a global variable.
 
 ### Usage Examples
 
