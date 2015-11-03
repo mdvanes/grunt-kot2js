@@ -30,8 +30,8 @@ exports.kot2js = {
     dev: function (test) {
         test.expect(1);
 
-        var actual = grunt.file.read('tmp/dev_templates.js');
-        var expected = grunt.file.read('test/expected/dev');
+        var actual = grunt.file.read('tmp/dev_templates.js').replace(/\r\n/g, '\n');;
+        var expected = grunt.file.read('test/expected/dev').replace(/\r\n/g, '\n');;
         console.log(actual, actual);
         test.equal(actual, expected, 'should combine to string array in the window.baz variable.');
 
