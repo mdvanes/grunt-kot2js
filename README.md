@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/mdvanes/grunt-kot2js.svg?branch=master) [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/grunt-kot2js)
+![Build Status](https://travis-ci.org/mdvanes/grunt-kot2js.svg?branch=master) [![npm version](https://badge.fury.io/js/grunt-kot2js.svg)](https://badge.fury.io/js/grunt-kot2js)
 
 # grunt-kot2js
 
@@ -103,6 +103,7 @@ Follow the jshintrc settings for the code style. Add unit tests for any new or c
 
 ## Release History
 
+* 2015-11-03    v0.4.2     merged pull request for namespaces
 * 2015-03-25    v0.4.0     added lib/stringTemplateEngine.js
 * 2015-03-25    v0.3.0     added unit tests
 * 2015-03-24    v0.2.0     input, output and namespace configurable
