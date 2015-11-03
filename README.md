@@ -1,8 +1,10 @@
+![Build Status](https://travis-ci.org/mdvanes/grunt-kot2js.svg?branch=master) [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/grunt-kot2js)
+
 # grunt-kot2js
 
 > Grunt task to convert Knockout templates to a string in a JavaScript file for the String Template Engine.
 
-Based on https://blog.safaribooksonline.com/2014/01/31/using-external-templates-knockout-js/ and https://github.com/rniemeyer/SamplePresentation/blob/master/js/stringTemplateEngine.js
+Based on [https://blog.safaribooksonline.com/2014/01/31/using-external-templates-knockout-js/ and https://github.com/rniemeyer/SamplePresentation/blob/master/js/stringTemplateEngine.js](https://blog.safaribooksonline.com/2014/01/31/using-external-templates-knockout-js/ and https://github.com/rniemeyer/SamplePresentation/blob/master/js/stringTemplateEngine.js)
 
 A version of the String Template Engine is included. It's located in `grunt-kot2js/lib/stringTemplateEngine.js`.
 
