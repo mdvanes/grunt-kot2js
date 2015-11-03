@@ -24,7 +24,7 @@ module.exports = function(grunt) {
             namespace = this.data.namespace;
         }
 
-        result += '    ' + namespace + ' = {};\n';
+        result += '    ' + namespace + ' = ' + namespace + ' || {};\n';
 
         files.forEach(function(file) {
             //strip the extension to determine a template name
