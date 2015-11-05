@@ -29,9 +29,10 @@ exports.kot2js = {
     },
     dev: function (test) {
         test.expect(1);
-
-        var actual = grunt.file.read('tmp/dev_templates.js').replace(/\r\n/g, '\n');;
-        var expected = grunt.file.read('test/expected/dev').replace(/\r\n/g, '\n');;
+        // Don't filter out linebreaks here, because in that case you can't test for linebreaks in the correct place.
+        // If the test fails because of linebreaks, check if the "expected" fixture is saved with LF linebreaks only, not CRLF.
+        var actual = grunt.file.read('tmp/dev_templates.js');
+        var expected = grunt.file.read('test/expected/dev');
         console.log(actual, actual);
         test.equal(actual, expected, 'should combine to string array in the window.baz variable.');
 
