@@ -64,6 +64,8 @@ Example output:
 })();
 ```
 
+The path to the template is used as a template ID (in this case "main").
+
 ### Properties
 
 #### src
@@ -103,6 +105,7 @@ Follow the jshintrc settings for the code style. Add unit tests for any new or c
 
 ## Release History
 
+* 2016-07-07    v0.5.0     merged pull request for paths as template ID.
 * 2015-11-03    v0.4.2     merged pull request for namespaces
 * 2015-03-25    v0.4.0     added lib/stringTemplateEngine.js
 * 2015-03-25    v0.3.0     added unit tests
