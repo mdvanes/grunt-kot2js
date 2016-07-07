@@ -1,6 +1,7 @@
 (function () {
     'use strict';
     window.baz = window.baz || {};
+    window.baz["Subfolder/TemplateC"] = "<span class=\x22c\x22 data-bind=\x22text: foobar\x22></span>";
     window.baz["TemplateA"] = "<span class=\x22a\x22 data-bind=\x22text: foo\x22></span>";
     window.baz["TemplateB"] = "<span class=\x22b\x22 data-bind=\x22text: bar\x22></span>";
 })();
