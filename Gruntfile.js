@@ -32,7 +32,8 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         kot2js: {
             dev: {
-                src: 'test/fixtures/*.html',
+                srcRoot: 'test/fixtures/',
+                src: '**/*.html',
                 dest: 'tmp/dev_templates.js',
                 namespace: 'window.baz'
             }
